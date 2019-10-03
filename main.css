@@ -1,5 +1,66 @@
+@font-face {
+  src: url("/assets/fonts/FuturaTEELig Regular.ttf");
+  font-family: "FuturaDemiC";
+}
+
 * {
   margin: 0;
   padding: 0;
+  background: #000;
+}
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 87%;
+  margin: auto;
+  margin-top: 37px;
+}
+
+.header__title {
+  font-family: "FuturaDemiC";
+  font-size: 14px;
+  color: #E3B873;
+}
+
+.header__nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  list-style-type: none;
+}
+
+.header__nav_item {
+  margin-left: 49px;
+  text-decoration: none;
+  color: #fff;
+  font-size: 14px;
+}
+
+.header__nav_item_active {
+  color: #E3B873;
+}
+
+.header__number {
+  color: #E3B873;
+  text-decoration: underline;
+  font-family: "FuturaDemiC";
+  font-weight: bold;
+}
+
+.header__requestBtn {
+  margin-top: -13px;
+  padding: 14px 34px;
+  font-size: 13px;
+  background: #E3B873;
+  color: #fff;
+  cursor: pointer;
 }
 /*# sourceMappingURL=main.css.map */

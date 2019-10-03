@@ -1,0 +1,64 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    background: #000;
+}
+
+.header
+{
+    display: flex;
+    justify-content: space-between;
+    width: 87%;
+    margin: auto;
+    margin-top: 37px;
+
+    &__title
+    {
+        font-family: $futuraDem;
+        font-size: 14px;
+        color: $color;   
+    }
+
+    &__nav
+    {
+        ul
+        {
+            display: flex;
+            justify-content: space-between;
+            list-style-type: none;
+        }
+
+        &_item
+        {
+            &_active
+            {
+                color: $color;
+            }
+
+            margin-left: 49px;
+            text-decoration: none;
+            color: #fff;
+            font-size: 14px;
+        }
+    }
+
+    &__number
+    {
+        color: $color;
+        text-decoration: underline;
+        font-family: $futuraDem;
+        font-weight: bold;
+    }
+
+
+    &__requestBtn
+    {   
+        margin-top: -13px;
+        padding: 14px 34px;
+        font-size: 13px;
+        background: $color;
+        color: #fff;
+        cursor: pointer;
+    }
+}
