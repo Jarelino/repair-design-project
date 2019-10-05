@@ -1,0 +1,86 @@
+.complete-progect
+{
+    display: flex;
+    background: red;
+    padding-top: 106px;
+    padding-bottom: 90px;
+    
+    &__content
+    {
+        flex: 1;
+        margin-top: 60px;
+        margin-left: 150px;
+        background: red;
+        &_props
+        {
+            width: 80%;
+            background: red;
+            @include flex-block();
+            flex-direction: row;
+            flex-wrap: wrap;
+            
+            &-item
+            {
+                width: 50%;
+                margin-top: 50px;
+                background: red;
+
+                @include flex-block();
+                flex-direction: column;
+            }
+        }
+
+        h2
+        {
+            background: red;
+        }
+
+        span
+        {
+            background: red;
+        }
+    }
+
+    &__slider
+    {
+        background: red;
+        flex: 1;
+        &_nav
+        {
+            background: red;
+            ul
+            {
+                @include flex-block(space-between);
+                width: 75%;
+                list-style: none;
+                background: red;
+                li a{background: red;};
+                margin-left: 5px;
+            }
+        }
+
+        &_content
+        {
+            margin-top: 45px;
+            background: orange;
+            height: 482px;
+            width: 679px;
+        }
+    }
+
+    @media screen and (max-width: $tablet) 
+    {
+        flex-direction: column;
+
+        &__slider
+        {
+            flex: none;
+            margin-top: 50px;
+        }    
+
+        &__content
+        {
+            flex: none;
+        }
+    }
+}
