@@ -7,21 +7,22 @@
 
 .header
 {
-    display: flex;
-    justify-content: space-between;
-    width: 87%;
-    margin: auto;
+    @include center_block();
+    @include flex_block(space-between);
+
+    font-size: 14px;
     margin-top: 37px;
 
     &__title
     {
         font-family: $futuraDem;
-        font-size: 14px;
+        font-size: 1em;
         color: $color;   
     }
 
     &__nav
     {
+
         ul
         {
             display: flex;
@@ -31,7 +32,7 @@
 
         &_item
         {
-            &_active
+            &:hover
             {
                 color: $color;
             }
@@ -39,26 +40,43 @@
             margin-left: 49px;
             text-decoration: none;
             color: #fff;
-            font-size: 14px;
+            font-size: 1em;
+        }
+
+
+        @media screen and (max-width: $tablet)
+        {
+            display: none;
         }
     }
 
     &__number
     {
-        color: $color;
+        @include text($text_color: $color, $size: 14px, $font: $futuraDem);
+
         text-decoration: underline;
-        font-family: $futuraDem;
         font-weight: bold;
+    
+        @media screen and (max-width: $tablet)
+        {
+            @include text($text_color : #fff, $font: $futuraDem);
+            text-decoration: none;
+        }
     }
 
 
     &__requestBtn
     {   
+        @include text($font: $futuraDem);
+
         margin-top: -13px;
         padding: 14px 34px;
-        font-size: 13px;
         background: $color;
-        color: #fff;
         cursor: pointer;
+
+        @media screen and (max-width: $tablet)
+        {
+            display: none;
+        }
     }
 }

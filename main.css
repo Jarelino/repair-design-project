@@ -10,20 +10,21 @@
 }
 
 .header {
+  width: 87%;
+  margin: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  width: 87%;
-  margin: auto;
+  font-size: 14px;
   margin-top: 37px;
 }
 
 .header__title {
   font-family: "FuturaDemiC";
-  font-size: 14px;
+  font-size: 1em;
   color: #E3B873;
 }
 
@@ -41,26 +42,49 @@
   margin-left: 49px;
   text-decoration: none;
   color: #fff;
-  font-size: 14px;
+  font-size: 1em;
 }
 
-.header__nav_item_active {
+.header__nav_item:hover {
   color: #E3B873;
+}
+
+@media screen and (max-width: 768px) {
+  .header__nav {
+    display: none;
+  }
 }
 
 .header__number {
+  font-size: 14px;
   color: #E3B873;
-  text-decoration: underline;
   font-family: "FuturaDemiC";
+  text-decoration: underline;
   font-weight: bold;
 }
 
+@media screen and (max-width: 768px) {
+  .header__number {
+    font-size: 14px;
+    color: #fff;
+    font-family: "FuturaDemiC";
+    text-decoration: none;
+  }
+}
+
 .header__requestBtn {
+  font-size: 14px;
+  color: #ffffff;
+  font-family: "FuturaDemiC";
   margin-top: -13px;
   padding: 14px 34px;
-  font-size: 13px;
   background: #E3B873;
-  color: #fff;
   cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  .header__requestBtn {
+    display: none;
+  }
 }
 /*# sourceMappingURL=main.css.map */

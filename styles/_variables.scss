@@ -1,2 +1,24 @@
 $color : #E3B873;
-$futuraDem : "FuturaDemiC"
+$futuraDem : "FuturaDemiC";
+$mobile : "375px";
+$tablet : "768px";
+
+
+@mixin center-block ($width : 87%)
+{
+    width: $width;
+    margin: auto;    
+}
+
+@mixin flex-block ($content : center)
+{
+    display: flex;
+    justify-content: $content;   
+}
+
+@mixin text ($text_color : #ffffff, $size: 14px, $font : "Arial")
+{
+    font-size: $size;
+    color: $text_color;
+    font-family: $font;
+}
