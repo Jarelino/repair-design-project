@@ -1,0 +1,138 @@
+.main-info
+{
+    color: #fff;
+    @include flex-block();
+    position: relative;
+    width: 100%;
+    margin-top: 21px;
+
+    &__inst
+    {
+        flex: 5;
+        background: green;
+        height: 707px;
+        width: 100%;
+        position: relative;
+        div
+        {
+            position: absolute;
+            @include flex-block();
+            transform: rotate(90deg);
+            top: 45%;
+            left: -20%;
+            background: green;
+            width: 100%;
+            hr
+            {   
+                transform: rotate(-90deg);  
+                height: 51px;
+            }
+        }
+
+
+        &_link
+        {
+            background: green;
+            text-decoration: none;
+            color: black;
+        }
+
+        @media screen and (max-width: $tablet) 
+        {
+            display: none;    
+        }
+    }
+
+    &__info
+    {
+        flex: 95;
+        background: yellow;
+        color:black;
+        position: relative;
+
+        height: 707px;
+
+        &_text
+        {
+            position: absolute;
+            top: 40%;
+            left: 3%;
+            
+            background: yellow;
+
+            &_title
+            {
+                background: yellow;
+            }
+
+            &_content
+            {
+                background: yellow;
+            }
+
+            &_btn 
+            {
+                a 
+                {
+                    background: green;
+                    
+                    &:last-child()
+                    {
+                        margin-left: 10px;
+                
+                    }
+                }
+
+                background: yellow;
+                margin-top: 10px;
+                cursor: pointer;
+            }
+        }
+
+        @media screen and (max-width: $tablet) 
+        {
+            &_text
+            {
+                width: 95%;
+                position: absolute;
+                top: 20%;
+                left: 5%;
+                
+                background: yellow;
+    
+                &_title
+                {
+                    background: yellow;
+                }
+    
+                &_content
+                {
+                    margin-top: 100px;
+                    background: yellow;
+
+                }
+
+                &_btn
+                {
+                    a
+                    {
+                        display: block;
+                        width: 95%;
+                        margin-top: 100px;
+                    }
+                }
+            }
+        }
+    }
+
+    &__scroll-down
+    {
+        display: none;
+        position: absolute;
+    
+        @media screen and (max-width: $tablet) 
+        {
+            display: none;    
+        }
+    }
+}

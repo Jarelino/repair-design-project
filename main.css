@@ -87,4 +87,133 @@
     display: none;
   }
 }
+
+.main-info {
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: none;
+      -ms-flex-pack: none;
+          justify-content: none;
+  position: relative;
+  width: 100%;
+  margin-top: 21px;
+}
+
+.main-info__inst {
+  -webkit-box-flex: 5;
+      -ms-flex: 5;
+          flex: 5;
+  background: green;
+  height: 707px;
+  width: 100%;
+  position: relative;
+}
+
+.main-info__inst div {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: none;
+      -ms-flex-pack: none;
+          justify-content: none;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  top: 45%;
+  left: -20%;
+  background: green;
+  width: 100%;
+}
+
+.main-info__inst div hr {
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  height: 51px;
+}
+
+.main-info__inst_link {
+  background: green;
+  text-decoration: none;
+  color: black;
+}
+
+@media screen and (max-width: 768px) {
+  .main-info__inst {
+    display: none;
+  }
+}
+
+.main-info__info {
+  -webkit-box-flex: 95;
+      -ms-flex: 95;
+          flex: 95;
+  background: yellow;
+  color: black;
+  position: relative;
+  height: 707px;
+}
+
+.main-info__info_text {
+  position: absolute;
+  top: 40%;
+  left: 3%;
+  background: yellow;
+}
+
+.main-info__info_text_title {
+  background: yellow;
+}
+
+.main-info__info_text_content {
+  background: yellow;
+}
+
+.main-info__info_text_btn {
+  background: yellow;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.main-info__info_text_btn a {
+  background: green;
+}
+
+.main-info__info_text_btn a:last-child() {
+  margin-left: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  .main-info__info_text {
+    width: 95%;
+    position: absolute;
+    top: 20%;
+    left: 5%;
+    background: yellow;
+  }
+  .main-info__info_text_title {
+    background: yellow;
+  }
+  .main-info__info_text_content {
+    margin-top: 100px;
+    background: yellow;
+  }
+  .main-info__info_text_btn a {
+    display: block;
+    width: 95%;
+    margin-top: 100px;
+  }
+}
+
+.main-info__scroll-down {
+  display: none;
+  position: absolute;
+}
+
+@media screen and (max-width: 768px) {
+  .main-info__scroll-down {
+    display: none;
+  }
+}
 /*# sourceMappingURL=main.css.map */

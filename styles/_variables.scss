@@ -10,7 +10,7 @@ $tablet : "768px";
     margin: auto;    
 }
 
-@mixin flex-block ($content : center)
+@mixin flex-block ($content : none)
 {
     display: flex;
     justify-content: $content;   
