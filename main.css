@@ -559,4 +559,31 @@
 .design-progects__content_item:nth-child(3) {
   height: 800px;
 }
+
+.goal-steps {
+  width: 90%;
+  margin: auto;
+  margin-top: 50px;
+  height: 686px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: none;
+      -ms-flex-pack: none;
+          justify-content: none;
+}
+
+.goal-steps__description {
+  -webkit-box-flex: 3;
+      -ms-flex: 3;
+          flex: 3;
+  background: blue;
+}
+
+.goal-steps__content {
+  -webkit-box-flex: 7;
+      -ms-flex: 7;
+          flex: 7;
+  background: yellow;
+}
 /*# sourceMappingURL=main.css.map */

@@ -1,0 +1,21 @@
+.goal-steps
+{
+    width: 90%;
+    margin: auto;
+    margin-top: 50px;
+    height: 686px;
+
+    @include flex-block();
+    &__description
+    {
+        flex: 3;
+        background: blue;
+    }
+    
+    &__content
+    {
+        flex: 7;
+        background: yellow;
+    }
+    
+}
