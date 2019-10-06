@@ -5,4 +5,11 @@
     margin: auto;
     margin-top: 50px;
     background: green;
+
+    @media screen and (max-width: $mobile)
+    {
+        width: 95%;
+        margin: auto;
+        margin-top: 50px;
+    }
 }

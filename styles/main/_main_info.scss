@@ -37,7 +37,7 @@
             color: black;
         }
 
-        @media screen and (max-width: $tablet) 
+        @media screen and (max-width: $mobile) 
         {
             display: none;    
         }
@@ -89,7 +89,7 @@
             }
         }
 
-        @media screen and (max-width: $tablet) 
+        @media screen and (max-width: $mobile) 
         {
             &_text
             {
@@ -130,7 +130,7 @@
         display: none;
         position: absolute;
     
-        @media screen and (max-width: $tablet) 
+        @media screen and (max-width: $mobile) 
         {
             display: none;    
         }

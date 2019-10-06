@@ -17,9 +17,20 @@
 
     &__item
     {
-        width: 392px;
+        width: 30%;
         height: 608px;
         background: gray;
+    }
+
+    @media screen and (max-width: $mobile)
+    {
+        width: 95%;
+        
+        &__item
+        {
+            margin-top: 15px;
+            width: 100%;
+        }
     }
 
 }

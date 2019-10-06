@@ -1,11 +1,4 @@
-*
-{
-    margin: 0;
-    padding: 0;
-    background: #000;
-}
-
-.header
+.footer
 {
     @include center_block();
     @include flex_block(space-between);
@@ -42,12 +35,6 @@
             color: #fff;
             font-size: 1em;
         }
-
-
-        @media screen and (max-width: $mobile)
-        {
-            display: none;
-        }
     }
 
     &__number
@@ -56,12 +43,6 @@
 
         text-decoration: underline;
         font-weight: bold;
-    
-        @media screen and (max-width: $mobile)
-        {
-            @include text($text_color : #fff, $font: $futuraDem);
-            text-decoration: none;
-        }
     }
 
 
@@ -73,18 +54,10 @@
         padding: 14px 34px;
         background: $color;
         cursor: pointer;
-
-        @media screen and (max-width: $mobile)
-        {
-            display: none;
-        }
     }
-}
 
-@media screen and (max-width: $mobile)
-{
-    footer
+    @media screen and (max-width: $mobile)
     {
-        display: none;
+        display: none;    
     }
 }

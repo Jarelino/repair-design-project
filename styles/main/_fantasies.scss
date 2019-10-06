@@ -20,4 +20,24 @@
         flex: 6;
         background: red;
     }
+
+    @media screen and (max-width: $mobile)
+    {
+        width: 95%;
+        margin-top: 1250px;
+        display: block;
+
+        &__styles
+        {
+            width: 100%;
+            height: 50px;
+        }
+
+        &__images
+        {
+            width: 100%;
+            margin-top: 25px;
+            height: 300px;
+        }
+    }
 }

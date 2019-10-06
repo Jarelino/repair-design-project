@@ -18,4 +18,9 @@
         flex:4;
         background: yellow;
     }
+
+    @media screen and (max-width: $mobile)
+    {
+        display: none;  
+    }
 }

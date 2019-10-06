@@ -32,7 +32,12 @@
         {
             background: red;
             height: 455px;
-            width: 421px;
+            width: 30%;
         }
+    }
+
+    @media screen and (max-width: $mobile)
+    {
+        display: none;
     }
 }
