@@ -1,0 +1,23 @@
+.fantasies
+{
+    @include flex-block(space-between);
+    width: 90%;
+    margin: auto;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: 150px;
+
+    &__styles
+    {
+        height: 638px;
+        flex: 4;
+        background: gray;
+    }
+
+    &__images
+    {
+        height: 1000px;
+        flex: 6;
+        background: red;
+    }
+}
