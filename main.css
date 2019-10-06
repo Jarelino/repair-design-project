@@ -682,4 +682,12 @@
   height: 455px;
   width: 421px;
 }
+
+.questions {
+  width: 883px;
+  height: 445px;
+  margin: auto;
+  margin-top: 50px;
+  background: green;
+}
 /*# sourceMappingURL=main.css.map */
