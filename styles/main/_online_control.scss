@@ -1,0 +1,68 @@
+.online-control
+{
+    @include flex-block();
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 150px;
+
+    &__header
+    {
+        width: 196px;
+        height: 67px;
+        background: yellowgreen;
+    }
+
+    &__video
+    {
+        margin-top: 15px;
+        width: 817px;
+        height: 434px;
+        background: blue;
+    }
+
+    &__decription
+    {
+        width: 681px;
+        height: 130px;
+        background: red;
+        margin-top: 15px;
+    }
+
+    &__form
+    {
+        background: green;
+        margin-top: 25px;
+        width: 769px;
+        height: 51px;
+
+        @include flex-block(space-between);
+        align-items: center;
+        flex-wrap: wrap;
+        &:last-child
+        {
+            justify-content: center;
+        }
+
+        &_name, &_phone
+        {
+            width: 231px;
+            height: 45px;
+            background: gray;
+        }
+
+        &_btn
+        {
+            width: 200px;
+            height: 51px;
+            background: gray;
+        }
+
+        &_agree
+        {
+            margin-top: 5px;
+            background: gray;
+            height: 18px;
+            width: 285px;
+        }
+    }
+}
