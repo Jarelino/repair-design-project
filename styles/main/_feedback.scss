@@ -1,0 +1,21 @@
+.feedback
+{
+    @include flex-block();
+    width: 100%;
+    flex-wrap: wrap;
+    align-items: center;
+
+    &__ways
+    {
+        height: 691px;
+        flex: 6;
+        background: blue;
+    }
+
+    &__form
+    {
+        height: 506px;
+        flex:4;
+        background: yellow;
+    }
+}
