@@ -1,0 +1,47 @@
+.team
+{
+    width: 90%;
+    margin: auto;
+    margin-top: 150px;
+
+    @include flex-block(space-between);
+    flex-wrap: wrap;
+
+    &__header
+    {
+        height: 67px;
+        width: 100%;
+        background: yellowgreen;
+    }
+
+    &__description
+    {
+        width: 100%;
+        height: 57px;
+        background: blue;
+        margin-top: 10px;
+    }
+
+    &__content
+    {
+        margin-top: 30px;
+        width: 100%;
+        @include flex-block(space-between);
+
+        &_item
+        {
+            width: 421px;
+            background: green;
+            height: 504px;
+        }
+    }
+
+    &__footer
+    {
+        width: 558px;
+        margin: auto;
+        margin-top: 50px;
+        height: 136px;
+        background: gray;
+    }
+}
