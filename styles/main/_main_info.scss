@@ -4,37 +4,34 @@
     @include flex-block();
     position: relative;
     width: 100%;
-    margin-top: 21px;
-
+    font-size: 0.85vw;
     &__inst
     {
         flex: 5;
-        background: green;
-        height: 707px;
         width: 100%;
         position: relative;
-        div
-        {
-            position: absolute;
-            @include flex-block();
-            transform: rotate(90deg);
-            top: 45%;
-            left: -20%;
-            background: green;
-            width: 100%;
-            hr
-            {   
-                transform: rotate(-90deg);  
-                height: 51px;
-            }
-        }
 
 
         &_link
         {
-            background: green;
             text-decoration: none;
-            color: black;
+            @include text($text_color: $color, $font: $futuraDem, $size: 1em);
+            writing-mode: vertical-lr;
+            position: relative;
+
+            width: 100%;
+            height: 48%;
+            left: 40%;
+            top: 38%;
+
+            hr
+            {
+                position: relative;
+                top: 27%;
+                left: -10%;
+                border: none;
+                background: $color;
+            }
         }
 
         @media screen and (max-width: $mobile) 
@@ -46,45 +43,69 @@
     &__info
     {
         flex: 95;
-        background: yellow;
+        background:linear-gradient(
+            rgba(0, 0, 0, 0.7), 
+            rgba(0, 0, 0, 0.7)
+          ),
+        url(./assets/images/main-info_bg.png) no-repeat;
+        background-size: cover;
         color:black;
         position: relative;
-
-        height: 707px;
+        padding-bottom: 25%;
 
         &_text
         {
-            position: absolute;
-            top: 40%;
-            left: 3%;
-            
-            background: yellow;
+            position: relative;
+            top: 60%;
+            left: 4%;
+            width: 36%;
 
             &_title
             {
-                background: yellow;
+                @include text($size: 3.5em, $font: $Yeseva);
+                width: 120%;
+                margin-bottom: 50px;
+                line-height: 1em;
+                text-transform: uppercase;
+                font-weight: normal;
+                letter-spacing: 0.8px;
+
+                span
+                {
+                    color: $color;
+                }
             }
 
             &_content
             {
-                background: yellow;
+                @include text($font: $futuraBook,$size: 2em);
             }
 
             &_btn 
             {
                 a 
-                {
-                    background: green;
+                {   
+                    padding: 20px 50px;
+                    border-radius: 5px;
+                    @include text($size: 1em, $font: $futuraDem);
+                    border: 3px solid #fff;
+                    background: none;
                     
-                    &:last-child()
+                    &:last-child
                     {
-                        margin-left: 10px;
-                
+                        margin-left: 50px;
                     }
-                }
 
-                background: yellow;
-                margin-top: 10px;
+                    &:hover
+                    {  
+                        background: $color;
+                        border: none;
+                        padding: 23px 53px;
+                    }
+                    
+                }
+                width: 150%;
+                margin-top: 74px;
                 cursor: pointer;
             }
         }
@@ -127,9 +148,26 @@
 
     &__scroll-down
     {
-        display: none;
         position: absolute;
-    
+        padding: 15px 30px;
+        background: #000;
+        display:flex;
+        bottom: 0%;
+        left: 0%;
+        font-family: $Yeseva;
+
+        &_text
+        {
+            margin-top: 5%;
+            cursor: pointer;
+        }
+
+        &_arrow
+        {
+            margin-left: 10px;
+            cursor: pointer;
+        }
+
         @media screen and (max-width: $mobile) 
         {
             display: none;    

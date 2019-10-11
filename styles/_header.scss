@@ -2,7 +2,11 @@
 {
     margin: 0;
     padding: 0;
-    background: #000;
+
+    body
+    {
+        background: #000;
+    }
 }
 
 .header
@@ -11,7 +15,8 @@
     @include flex_block(space-between);
 
     font-size: 14px;
-    margin-top: 37px;
+    margin-top: 1.5%;
+    margin-bottom: 0.7%;
 
     &__title
     {
@@ -39,8 +44,7 @@
 
             margin-left: 49px;
             text-decoration: none;
-            color: #fff;
-            font-size: 1em;
+            @include text($size: 1em, $font: $futuraDem);
         }
 
 
@@ -52,7 +56,7 @@
 
     &__number
     {
-        @include text($text_color: $color, $size: 14px, $font: $futuraDem);
+        @include text($text_color: $color, $size: 1em, $font: $futuraDem);
 
         text-decoration: underline;
         font-weight: bold;
@@ -68,23 +72,22 @@
     &__requestBtn
     {   
         @include text($font: $futuraDem);
-
+        
         margin-top: -13px;
-        padding: 14px 34px;
+        padding: 0.8% 2%;
+        border-radius: 5px;
         background: $color;
         cursor: pointer;
+        text-align: center;
 
+        &:hover
+        {
+            background: #e3b873ca;
+        }
+        
         @media screen and (max-width: $mobile)
         {
             display: none;
         }
-    }
-}
-
-@media screen and (max-width: $mobile)
-{
-    footer
-    {
-        display: none;
     }
 }
