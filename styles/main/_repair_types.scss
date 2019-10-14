@@ -1,26 +1,103 @@
 .repair-types
 {
-    width: 80%;
-    height: 708px;
+    position: relative;
+    top: -450px;
+    background: #fff;
     margin: auto;
-    @include flex-block(space-between);
-    align-items: center;
-    flex-wrap: wrap;
-    margin-bottom: 150px;    
-
+    width: 100%;
+    font-size: 20px;  
+    z-index: 1;
+    padding-top: 700px;
+    margin-bottom: -450px;
     &__header
     {
+        
         width: 100%;
-        height: 67px;
-        background: green;
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        margin-bottom: 30px;
+        span
+        {
+            text-align: center;
+            @include text($size: 1em, $font: $Yeseva, $text_color: #000);
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
     }
 
-    &__item
+    &__items
     {
-        width: 30%;
-        height: 608px;
-        background: gray;
+        width: 87%;
+        margin: auto;
+        @include flex-block(space-between);
+        flex-wrap: wrap;
+
+        &_item
+        {
+            width: 30%;
+            &_img
+            {
+                margin: auto;
+                img
+                {
+                    width: 100%;
+                }
+            }
+
+            &_description
+            {
+                background: #fff;
+                padding: 20px 0px 70px 10px;
+                position: relative;
+                top: -100px;
+                margin-left: 35px;
+                width: 80%;
+                box-shadow: 0 0 10px 1px #5c5c5c73;
+                span
+                {
+                    margin-left: 30px;
+                    @include text($font: $Yeseva, $size: 0.9em, $text_color: #000);
+                    font-weight: normal;
+                }
+
+                ul
+                {
+                    
+                    width: 80%;
+                    margin-left: 50px;
+                    li
+                    {
+                        @include text($font: $futuraBook, $size: 0.75em, $text_color: #959595);
+                        margin-top: 15px;
+                    }
+                }
+
+                
+            }
+            
+            &_btn
+            {
+                position: relative;
+                top: 100px;
+                left: -10px;
+                padding: 20px 20px;
+                background: $color;
+                border: none;
+                @include text($font: $Yeseva, $size: 0.9em);
+                font-weight: normal;
+                text-transform: uppercase;
+                cursor: pointer;
+
+                &:hover
+                {
+                    background: #bda175;
+                }
+            }
+
+        }
     }
+
 
     @media screen and (max-width: $mobile)
     {

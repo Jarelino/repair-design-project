@@ -4,7 +4,6 @@
     @include flex-block();
     position: relative;
     width: 100%;
-    font-size: 0.85vw;
     &__inst
     {
         flex: 5;
@@ -15,7 +14,7 @@
         &_link
         {
             text-decoration: none;
-            @include text($text_color: $color, $font: $futuraDem, $size: 1em);
+            @include text($text_color: $color, $font: $futuraDem, $size: 0.7em);
             writing-mode: vertical-lr;
             position: relative;
 
@@ -62,8 +61,8 @@
 
             &_title
             {
-                @include text($size: 3.5em, $font: $Yeseva);
-                width: 120%;
+                @include text($size: 2.5em, $font: $Yeseva);
+                width: 110%;
                 margin-bottom: 50px;
                 line-height: 1em;
                 text-transform: uppercase;
@@ -72,13 +71,13 @@
 
                 span
                 {
-                    color: $color;
+                    @include text($text_color: $color, $size: 1em);
                 }
             }
 
             &_content
             {
-                @include text($font: $futuraBook,$size: 2em);
+                @include text($font: $futuraBook,$size: 1.5em);
             }
 
             &_btn 
@@ -87,7 +86,7 @@
                 {   
                     padding: 20px 50px;
                     border-radius: 5px;
-                    @include text($size: 1em, $font: $futuraDem);
+                    @include text($size: 0.7em, $font: $futuraDem);
                     border: 3px solid #fff;
                     background: none;
                     
@@ -154,12 +153,13 @@
         display:flex;
         bottom: 0%;
         left: 0%;
-        font-family: $Yeseva;
 
         &_text
         {
             margin-top: 5%;
             cursor: pointer;
+            @include text($font: $Yeseva, $size: 0.8em);
+            font-weight: normal;
         }
 
         &_arrow

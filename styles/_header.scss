@@ -7,6 +7,8 @@
     {
         background: #000;
     }
+
+    font-size: 20px;
 }
 
 .header
@@ -14,14 +16,13 @@
     @include center_block();
     @include flex_block(space-between);
 
-    font-size: 14px;
     margin-top: 1.5%;
     margin-bottom: 0.7%;
 
     &__title
     {
         font-family: $futuraDem;
-        font-size: 1em;
+        font-size: 0.7em;
         color: $color;   
     }
 
@@ -44,7 +45,7 @@
 
             margin-left: 49px;
             text-decoration: none;
-            @include text($size: 1em, $font: $futuraDem);
+            @include text($size: 0.7em, $font: $futuraDem);
         }
 
 
@@ -56,7 +57,7 @@
 
     &__number
     {
-        @include text($text_color: $color, $size: 1em, $font: $futuraDem);
+        @include text($text_color: $color, $size: 0.7em, $font: $futuraDem);
 
         text-decoration: underline;
         font-weight: bold;
@@ -71,7 +72,7 @@
 
     &__requestBtn
     {   
-        @include text($font: $futuraDem);
+        @include text($font: $futuraDem, $size: 0.65em);
         
         margin-top: -13px;
         padding: 0.8% 2%;

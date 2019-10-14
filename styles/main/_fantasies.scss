@@ -1,24 +1,86 @@
 .fantasies
 {
-    @include flex-block(space-between);
-    width: 90%;
+    @include flex-block(space-around);
     margin: auto;
     flex-wrap: wrap;
     align-items: center;
-    margin-top: 150px;
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+                url("./assets/images/fantasies_bg.png") no-repeat;
+    background-size: cover;
+    font-size: 20px;
 
     &__styles
     {
-        height: 638px;
-        flex: 4;
-        background: gray;
+        width: 30%;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        
+        &_header
+        {
+            width: 50%;
+            span
+            {
+                @include text($text_color: $color, $font: $Yeseva, $size: 1.35em); 
+                font-weight: normal;
+            }
+        }
+
+        &_list
+        {
+            list-style: none;
+            &_item
+            {
+                @include text($font: $Proxima, $size: 1em);
+                margin-top: 30px;
+                cursor: pointer;
+                height: 28px;
+                &_active, &:hover
+                {
+                    height: 27px;
+                    color: $color;
+                    width: fit-content;
+                    border-bottom: 1px solid $color;
+                }
+            }
+        }
     }
 
     &__images
     {
-        height: 1000px;
-        flex: 6;
-        background: red;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        margin: auto;
+        width: 55%;
+
+        &_columns
+        {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            
+            &_item
+            {
+                height: fit-content;
+                width: fit-content;
+                position: relative;
+                margin-top: 40px;
+            } 
+            
+            &:nth-child(2)
+            {
+                position: relative;
+                bottom: 100px;
+            }
+
+            &:nth-child(1)
+            {
+                position: relative;
+                top: 50px;
+            }
+        }
     }
 
     @media screen and (max-width: $mobile)

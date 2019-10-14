@@ -4,19 +4,99 @@
     width: 100%;
     flex-wrap: wrap;
     align-items: center;
-
+    background: url("/assets/images/types-of-repair_bg.jpg") no-repeat;
+    background-size: cover;
+    font-size: 20px;
+    padding-bottom: 300px;
+    
     &__ways
     {
         height: 691px;
-        flex: 6;
-        background: blue;
+        width: 60%;
+        border: 5px solid black;
     }
-
+    
     &__form
     {
-        height: 506px;
-        flex:4;
-        background: yellow;
+        width: 30%;
+        margin: auto;
+        background: #000;
+        padding-top: 40px;
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 60px;
+        box-shadow: 0 0 10px 1px #5c5c5c73;
+        &_header
+        {
+            width: 40%;
+            margin: auto;
+            text-align: center;
+            
+            &_text
+            {
+                @include text($size: 1em, $font: $futuraDem);
+            }
+        }
+        &_name, &_phone, &_email
+        {
+            display: flex;
+            flex-direction: column;
+            width: 80%;
+            margin: auto;
+            margin-top: 50px;
+            span
+            {
+                @include text($size: 0.75em, $font: $futuraBook, $text_color: rgba(255,255,255,0.5));
+            }
+
+            input
+            {
+                @include text($size: 0.9em, $font: $futuraBook );
+                height: 40px;
+                background: none;
+                border: none;
+                outline: none;
+                border-bottom: 1px solid rgba(255,255,255,0.5);
+                &::-webkit-input-placeholder {color:#fff;}
+                &::-moz-placeholder          {color: #fff;}
+                &:-moz-placeholder           {color:#fff;}
+                &:-ms-input-placeholder      {color:#fff;}
+                
+            }
+        }
+
+        &_agree
+        {
+            margin: auto;
+            margin-top: 15px;
+            width: 80%;
+            span
+            {
+                @include text($font: $futuraBook, $size: 0.8em);
+            }
+        }
+
+        &_btn-block
+        {
+            margin: auto;
+            margin-top: 60px;
+            width: 80%;
+            display: flex;
+            flex-direction: row-reverse;
+            &_button
+            {
+                @include text($font: $futuraDem, $size: 0.8em);
+                border: none;
+                outline: none;
+                background: $color;
+                padding: 20px 50px;
+                cursor: pointer;
+                &:hover
+                {
+                    background: #e3b873b2;
+                }
+            }
+        }
     }
 
     @media screen and (max-width: $mobile)

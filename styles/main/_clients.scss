@@ -1,38 +1,123 @@
 .clients
 {
-    width: 90%;
+    width: 100%;
     margin: auto;
-    margin-top: 150px;
+    padding-top: 650px;
 
     @include flex-block(space-between);
     flex-wrap: wrap;
+    background: #fff;
+
+    position: relative;
+    bottom: 500px;
+    margin-bottom: -500px;
+    z-index: 1;
+
+    padding-bottom: 300px;
 
     &__header
     {
-        height: 67px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         width: 100%;
-        background: yellowgreen;
+        margin: auto;
+        &_title
+        {
+            @include text($text_color: #000,$font: $Yeseva);
+            text-transform: uppercase;
+        }
+
+        img
+        {
+            margin-top: 10px;
+        }
     }
 
     &__description
     {
-        width: 100%;
-        height: 57px;
-        background: blue;
-        margin-top: 10px;
+        width: 20%;
+        margin: auto;
+        margin-top: 30px;
+
+        @include text($font: $futuraBook, $size: 1em, $text_color: #000);
+        text-align: center;
+        
     }
 
     &__content
     {
-        margin-top: 30px;
-        width: 100%;
+        width: 87%;
+        margin: auto;
+        margin-top: 50px;
         @include flex-block(space-between);
         
         &_item
         {
-            background: red;
-            height: 455px;
-            width: 30%;
+            width: 20%;
+            display: flex;
+            flex-direction: column;
+            padding: 30px;
+            box-shadow: 0 0 10px 1px #5c5c5c73;
+            &_main
+            {
+                display: flex;
+                width: 90%;
+                
+                &_photo
+                {
+                    width: 30%;
+                }
+
+                &_name
+                {
+                    width: 70%;
+                    @include text($text_color: #181818, $font: $Yeseva, $size: 0.9em);
+                }
+
+            }
+            &_content
+            {
+                width: 100%;
+                margin-top: 20px;
+                line-height: 25px;
+                @include text($text_color: #959595, $size: 0.75em, $font: $futuraBook);
+            }
+
+            &_info
+            {
+                width: 120%;
+                display: flex;
+                position: relative;
+                top: 55px;
+                left: -30px;
+                &_area, &_time
+                {
+                    padding: 10px 20px;
+                    background: $color;
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+
+                    span
+                    {
+                        width: 70%;
+                        margin-left: 15px;
+                        @include text($font: $Yeseva, $size: 1em);
+                    }
+                }
+
+                &_area
+                {
+                    width: 30%;
+                }
+
+                &_time
+                {
+                    width: 35%;
+                    border-left: 1px solid #fff;
+                }
+            }
         }
     }
 

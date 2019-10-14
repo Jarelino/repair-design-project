@@ -1,6 +1,7 @@
 $color : #E3B873;
 $futuraDem : "FuturaDemiC";
 $futuraBook : "FuturaBook";
+$Proxima :  "Proxima Nova";
 $Yeseva: "Yeseva One";
 $mobile : "375px";
 $tablet : "768px";
@@ -18,7 +19,7 @@ $tablet : "768px";
     justify-content: $content;   
 }
 
-@mixin text ($text_color : #ffffff, $size: 14px, $font : "Arial")
+@mixin text ($text_color : #ffffff, $size: 1em, $font : "Arial")
 {
     font-size: $size;
     color: $text_color;

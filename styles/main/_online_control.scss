@@ -5,70 +5,127 @@
     align-items: center;
     width: 50%;
     margin: auto;
-    margin-bottom: 150px;
-    margin-top: 50px;
+    font-size: 20px;
+    position: relative;
+    bottom: 350px;
+    margin-bottom: -450px;
+    z-index:  2;
+
     &__header
     {
-        width: 196px;
-        height: 67px;
-        background: yellowgreen;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 20px;
+        
+        &_title
+        {
+            @include text($size: 1em, $font: $Yeseva);
+            text-transform: uppercase;
+        }
     }
 
     &__video
     {
         margin-top: 15px;
         width: 100%;
-        height: 434px;
-        background: blue;
+        height: 500px;
+        iframe
+        {
+            width: 100%;
+            height: 100%;
+        }
     }
 
-    &__decription
+    &__description
     {
-        width: 681px;
-        height: 130px;
-        background: red;
-        margin-top: 15px;
+        @include text($size: 1em, $font: $futuraBook, $text_color: #000);
+        width: 72%;
+        text-align: center;
+        margin: auto;
+        margin-top: 50px;
     }
 
     &__form
     {
-        background: green;
-        margin-top: 25px;
         width: 769px;
-        height: 51px;
-
+        
         @include flex-block(space-between);
-        align-items: center;
         flex-wrap: wrap;
-
-        &_agree
+        margin-top: 50px;
+        
+        * input
         {
-            margin: auto;
+            height: 51px;
+            
+            width: 100%;
         }
 
         &_name, &_phone
         {
             width: 30%;
-            height: 45px;
-            background: gray;
+            height: 100%;
             order: 1;
+
+            span
+            {
+                @include text($text_color: #363636, $font: $futuraBook, $size: 0.75em);
+            }
+
+            input
+            {
+                border: none;
+                border-bottom: 1px solid #363636;
+                @include text($size: 0.9em, $font: $futuraBook, $text_color: #000);
+                outline: none;
+            }
         }
 
         &_btn
         {
             width: 30%;
-            height: 51px;
-            background: gray;
+            height: 75px;
             order: 1;
+            display: flex;
+            align-items: flex-end;
+            button
+            {
+                width: 95%;
+                height: 75%;
+                border: none;
+                background: $color;
+                border-radius: 5px;
+                @include text($size: 0.8em, $font: $futuraDem);
+                outline: none;
+                margin-left: -3px;
+                margin-bottom: -3px;
+                &:hover
+                {
+                    box-shadow: -3px 3px 1px 1px #e3b873b2;
+                    margin: 0;
+                }
+
+                &:active
+                {
+                    box-shadow: none;
+                    margin-left: -3px;
+                    margin-bottom: -3px;
+                }
+            }
         }
 
         &_agree
         {
             order: 2;
-            margin-top: 5px;
-            background: gray;
-            height: 18px;
-            width: 285px;
+            @include text($text_color: #000, $size: 0.8em, $font: $futuraBook);
+            display: flex;
+            margin: auto;
+            margin-top: 35px;
+
+            input
+            {
+                height: 20px;
+                width: 20px;
+            }
         }
     }
 
