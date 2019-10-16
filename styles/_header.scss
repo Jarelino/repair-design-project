@@ -2,7 +2,7 @@
 {
     margin: 0;
     padding: 0;
-
+    
     body
     {
         background: #000;
@@ -15,10 +15,8 @@
 {
     @include center_block();
     @include flex_block(space-between);
-
-    margin-top: 1.5%;
-    margin-bottom: 0.7%;
-
+    align-items: baseline;
+    padding: 10px 0;
     &__title
     {
         font-family: $futuraDem;
@@ -74,7 +72,6 @@
     {   
         @include text($font: $futuraDem, $size: 0.65em);
         
-        margin-top: -13px;
         padding: 0.8% 2%;
         border-radius: 5px;
         background: $color;

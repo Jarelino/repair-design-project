@@ -79,6 +79,7 @@
         {
             display: flex;
             justify-content: space-between;
+            align-items: baseline;
             width: 60%;
             margin-top: 130px;
 
@@ -90,8 +91,8 @@
             &_circle
             {
                 background: #fff;
-                height: 10px;
-                width: 10px;
+                height: 14px;
+                width: 14px;
                 border-radius: 50%;
                 opacity: 0.5;
                 margin-top: 5px;
@@ -101,6 +102,12 @@
                     opacity: 1;
                 }   
             }
+
+            .active
+            {
+                opacity: 1;
+            }
+
         }
     }
     

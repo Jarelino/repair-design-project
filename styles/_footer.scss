@@ -2,14 +2,15 @@
 {
     @include center_block();
     @include flex_block(space-between);
-
-    font-size: 14px;
+    align-items: baseline;
     margin-top: 37px;
+    height: 100%;
+    padding: 20px 0 30px 0;
 
     &__title
     {
         font-family: $futuraDem;
-        font-size: 1em;
+        font-size: 0.7em;
         color: $color;   
     }
 
@@ -33,13 +34,13 @@
             margin-left: 49px;
             text-decoration: none;
             color: #fff;
-            font-size: 1em;
+            font-size: 0.7em;
         }
     }
 
     &__number
     {
-        @include text($text_color: $color, $size: 14px, $font: $futuraDem);
+        @include text($text_color: $color, $size: 0.7em, $font: $futuraDem);
 
         text-decoration: underline;
         font-weight: bold;
@@ -48,7 +49,7 @@
 
     &__requestBtn
     {   
-        @include text($font: $futuraDem);
+        @include text($font: $futuraDem, $size: 0.65em);
 
         margin-top: -13px;
         padding: 14px 34px;

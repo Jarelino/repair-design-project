@@ -4,8 +4,7 @@
     width: 100%;
     flex-wrap: wrap;
     align-items: center;
-    background: url("/assets/images/types-of-repair_bg.jpg") no-repeat;
-    background-size: cover;
+    background: #fff;
     font-size: 20px;
     padding-bottom: 300px;
     
@@ -13,7 +12,7 @@
     {
         height: 691px;
         width: 60%;
-        border: 5px solid black;
+        background: url(/assets/images/house.png) no-repeat;
     }
     
     &__form

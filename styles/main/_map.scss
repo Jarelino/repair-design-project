@@ -1,29 +1,59 @@
 .map
 {
-    width: 55%;
     margin: auto;
-    @include flex-block();
+    display:flex;
     flex-direction: column;
+    background: #181818;
+    
+    
+    padding-top: 400px;
+    z-index: 1;
 
     &__info
     {
-        height: 100px;
-        width: 60%;
         margin: auto;
-        background: blue;
-        margin-top: 50px;
         order: 1;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+
+        &_text
+        {
+            width: 60%;
+            text-align: center;
+            span
+            {
+                width: 30%;
+                @include text($font: $Yeseva, $size: 1em, $text_color: $color);
+            }
+        }
+
+        &_logos
+        {
+            margin-top: 20px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+
+            img
+            {
+                background: $color;
+                height: 15px;
+                width: 15px;
+                padding: 5px;
+                border-radius: 40%;
+                margin: 20px;
+                cursor: pointer;
+            }
+        }
     }
 
     &__map
     {
         order: 2;
-        width: 100%;
-        height: 465px;
         margin: auto;
-        background: yellow;
-        margin-top: 50px;
-        margin-bottom: 50px;
+        margin-top: 80px;
     }
 
     @media screen and (max-width: $mobile)

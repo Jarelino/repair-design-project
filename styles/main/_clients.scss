@@ -7,13 +7,9 @@
     @include flex-block(space-between);
     flex-wrap: wrap;
     background: #fff;
-
-    position: relative;
-    bottom: 500px;
-    margin-bottom: -500px;
     z-index: 1;
 
-    padding-bottom: 300px;
+    padding-bottom: 500px;
 
     &__header
     {

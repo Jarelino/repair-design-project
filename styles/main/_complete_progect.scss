@@ -8,7 +8,7 @@
     
     &__content
     {
-        flex: 1;
+        width: 40%;
         margin-top: 60px;
         margin-left: 150px;
 
@@ -48,14 +48,16 @@
         {
             display: flex;
             justify-content: space-between;
+            align-items: baseline;
             width: 30%;
             margin-top: 90px;
+
             &_circle
             {
                 margin-top: 1px;
-                height: 10px;
-                width: 10px;
-                border-radius: 5px;
+                height: 14px;
+                width: 14px;
+                border-radius: 50%;
                 background: #fff;
                 opacity: 0.7;
                 cursor: pointer;
@@ -64,6 +66,11 @@
                 {
                     opacity: 1;
                 }
+            }
+
+            .active
+            {
+                opacity: 1;
             }
 
             &_arrow-left, &_arrow-right
@@ -114,9 +121,8 @@
 
     &__slider
     {
-        flex: 1.8;
         position: relative;
-
+        width: 60%;
         &_nav
         {  
             width: 100%;
@@ -155,32 +161,36 @@
             margin-top: 45px;
             display: flex;
             overflow: hidden;
-            // width: 1128px;
+            width: 100%;
+            position: relative;
             
             img
             {
                 margin-left: 30px;
+
                 &:first-child
                 {
                     margin-left: 0px;
                 }
             }
-        }
-
-        &_next
-        {
-            position: absolute;
-            padding: 20px 22px 17px 24px;
-            background: $color;
-            right: 2%;
-            top: 50%;
-            border-radius: 100px;
-
-            &:hover
+            
+            &_next
             {
-                opacity: 0.92;
+                position: absolute;
+                padding: 20px 22px 17px 24px;
+                background: $color;
+                right: 0%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                border-radius: 100px;
+    
+                &:hover
+                {
+                    opacity: 0.92;
+                }
             }
         }
+
 
     }
 
