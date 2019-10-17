@@ -2,10 +2,16 @@
 {
     display: flex;
     padding-top: 106px;
-    padding-bottom: 25%;
+    padding-bottom: 500px;
     font-size: 14px;
     background: #000;
     
+    @media screen and (max-width: $mobile)
+    {
+        padding-top: 10px;
+        padding-bottom: 0;
+    }
+
     &__content
     {
         width: 40%;
@@ -41,6 +47,11 @@
                     width: 40%;
                     line-height: 18px;
                 }
+            }
+
+            @media screen and (max-width: $mobile)
+            {
+                display: none;
             }
         }
 
@@ -81,6 +92,10 @@
                     cursor: pointer;
                 }
             }
+            @media screen and (max-width: $mobile)
+            {
+                display: none;
+            }
         }
 
         &_header
@@ -116,6 +131,35 @@
                 @include text($font: $futuraBook, $size: 1.3em);
             }
             width: 70%;
+        }
+
+        @media screen and (max-width: $mobile)
+        {
+            width: 90%;
+            margin: auto;
+
+            &_header
+            {
+                text-align: center;
+                margin: auto;
+                hr
+                {
+                    display: none;
+                }
+
+                h2
+                {
+                    width: 100%;
+                }
+            }
+
+            &_info
+            {
+                text-align: center;
+                margin: auto;
+                margin-top: 30px;
+                width: 100%;
+            }
         }
     }
 
@@ -154,6 +198,11 @@
                 }
 
             }
+
+            @media screen and (max-width: $mobile)
+            {
+                display: none;
+            }
         }
 
         &_content
@@ -174,19 +223,34 @@
                 }
             }
             
-            &_next
+            &_next, &_prev
             {
                 position: absolute;
                 padding: 20px 22px 17px 24px;
                 background: $color;
-                right: 0%;
                 top: 50%;
                 transform: translate(-50%, -50%);
                 border-radius: 100px;
-    
+                
                 &:hover
                 {
                     opacity: 0.92;
+                }
+            }
+            &_next
+            {
+                right: 0%;
+            }
+            &_prev
+            {
+                left: 5%;
+                top: 45%;
+                transform: translate(-50%, -50%);
+                transform: rotate(180deg);
+                display: none;
+                @media screen and (max-width: $mobile)
+                {
+                    display: block;
                 }
             }
         }
@@ -197,11 +261,27 @@
     @media screen and (max-width: $mobile) 
     {
         flex-direction: column;
-
+        width: 90%;
+        margin: auto;
         &__slider
         {
             flex: none;
             margin-top: 50px;
+            width: 100%;
+            
+            
+            &_content
+            {
+                overflow: visible;
+                img
+                {
+                    width: 100%;
+                }
+                &_prev
+                {
+                    top: 37%;
+                }
+            }
         }    
 
         &__content

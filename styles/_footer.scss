@@ -30,11 +30,9 @@
             {
                 color: $color;
             }
-
+            @include text($size: 0.7em, $font: $futuraDem);
             margin-left: 49px;
             text-decoration: none;
-            color: #fff;
-            font-size: 0.7em;
         }
     }
 

@@ -1,7 +1,5 @@
 .repair-types
 {
-    position: relative;
-    bottom: 450px;
     background: #fff;
     margin: auto;
     width: 100%;
@@ -9,6 +7,7 @@
     z-index: 1;
     padding-top: 700px;
     margin-bottom: -450px;
+    padding-bottom: 500px;
     &__header
     {
         
@@ -57,7 +56,7 @@
                 span
                 {
                     margin-left: 30px;
-                    @include text($font: $Yeseva, $size: 0.9em, $text_color: #000);
+                    @include text($font: $Yeseva, $size: 1em, $text_color: #000);
                     font-weight: normal;
                 }
 
@@ -68,7 +67,7 @@
                     margin-left: 50px;
                     li
                     {
-                        @include text($font: $futuraBook, $size: 0.75em, $text_color: #959595);
+                        @include text($font: $futuraBook, $size:1em, $text_color: #959595);
                         margin-top: 15px;
                     }
                 }
@@ -84,7 +83,7 @@
                 padding: 20px 20px;
                 background: $color;
                 border: none;
-                @include text($font: $Yeseva, $size: 0.9em);
+                @include text($font: $Yeseva, $size: 1em);
                 font-weight: normal;
                 text-transform: uppercase;
                 cursor: pointer;
@@ -101,12 +100,25 @@
 
     @media screen and (max-width: $mobile)
     {
-        width: 95%;
-        
-        &__item
+        padding-top: 100px;
+        padding-bottom: 300px;
+        margin-bottom: -1700px;
+        &__items
         {
-            margin-top: 15px;
-            width: 100%;
+            &_item
+            {
+                width: 100%;
+                &_description
+                {
+                    margin: unset;
+                    padding-bottom: 0;
+
+                }
+                &_btn
+                {
+                    top: 25px;
+                }
+            }
         }
     }
 

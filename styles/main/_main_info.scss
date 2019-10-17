@@ -82,11 +82,14 @@
 
             &_btn 
             {
-                a 
+                width: 150%;
+                margin-top: 74px;
+                cursor: pointer;
+                button 
                 {   
                     padding: 20px 50px;
                     border-radius: 5px;
-                    @include text($size: 0.7em, $font: $futuraDem);
+                    @include text($size: 1em, $font: $futuraDem);
                     border: 3px solid #fff;
                     background: none;
                     
@@ -103,42 +106,38 @@
                     }
                     
                 }
-                width: 150%;
-                margin-top: 74px;
-                cursor: pointer;
             }
         }
-
-        @media screen and (max-width: $mobile) 
+        
+        @media screen and (max-width: $mobile)
         {
+
+            background-position: 50% 50%;
             &_text
             {
-                width: 95%;
-                position: absolute;
-                top: 20%;
-                left: 5%;
-                
-                background: yellow;
-    
+                position: unset;
+                margin-left: 10px;
+                width: 80%;
                 &_title
                 {
-                    background: yellow;
+                    margin-top: 55px;
+                    font-size: 1.7em;
                 }
-    
-                &_content
-                {
-                    margin-top: 100px;
-                    background: yellow;
-
-                }
+            
 
                 &_btn
                 {
-                    a
+                    width: 130%;
+                    margin: 0;
+                    button
                     {
-                        display: block;
-                        width: 95%;
-                        margin-top: 100px;
+                        margin: auto;
+                        margin-top: 20px;
+                        width: 90%;
+                        &:last-child
+                        {
+                            margin-left: 0;
+                        }
                     }
                 }
             }
