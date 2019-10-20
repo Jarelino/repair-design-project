@@ -182,4 +182,9 @@
             }
         }
     }
+
+    @media screen and (min-width: $mobile) and (max-width: $desktopMin)
+    {
+        bottom: 100px;    
+    }
 }

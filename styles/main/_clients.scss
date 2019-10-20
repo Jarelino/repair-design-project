@@ -121,4 +121,14 @@
     {
         display: none;
     }
+    
+    @media screen and (min-width: $mobile) and (max-width: $desktopMin)
+    {
+        padding-top: 500px;   
+        
+        &__content_item_main_photo 
+        {
+            width: 50%;
+        }
+    }
 }

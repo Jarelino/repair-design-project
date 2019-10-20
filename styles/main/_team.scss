@@ -151,4 +151,14 @@
             display: none;
         }
     }
+
+    @media screen and (min-width: $mobile) and (max-width: $desktopMin)
+    {
+        bottom: 400px;
+        &__content_item_logo
+        {
+            top: 8%;
+            left: 12%;
+        }    
+    }
 }

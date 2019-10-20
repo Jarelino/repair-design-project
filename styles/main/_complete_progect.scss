@@ -289,4 +289,31 @@
             flex: none;
         }
     }
+
+
+    @media screen and (min-width: $mobile) and (max-width: $desktopMin)
+    {
+        padding-bottom: 200px;
+        &__slider_nav
+        {
+            width: 130%;
+        }
+        
+        &__content
+        {
+            margin-left: 80px;
+            &_header
+            {
+                width: 70%;
+            }
+            &_info
+            {
+                width: 90%;
+            }
+            &_change
+            {
+                width: 40%;
+            }
+        }
+    }
 }
