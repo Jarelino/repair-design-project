@@ -617,7 +617,7 @@
   }
 }
 
-@media screen and (min-width: 375px) and (max-width: 1440px) {
+@media screen and (min-width: 376px) and (max-width: 1440px) {
   .complete-progect {
     padding-bottom: 200px;
   }
@@ -841,7 +841,7 @@
   }
 }
 
-@media screen and (min-width: 375px) and (max-width: 1440px) {
+@media screen and (min-width: 376px) and (max-width: 1440px) {
   .online-control {
     bottom: 100px;
   }
@@ -1835,7 +1835,7 @@
   }
 }
 
-@media screen and (min-width: 375px) and (max-width: 1440px) {
+@media screen and (min-width: 376px) and (max-width: 1440px) {
   .team {
     bottom: 400px;
   }
@@ -1999,7 +1999,7 @@
   }
 }
 
-@media screen and (min-width: 375px) and (max-width: 1440px) {
+@media screen and (min-width: 376px) and (max-width: 1440px) {
   .clients {
     padding-top: 500px;
   }

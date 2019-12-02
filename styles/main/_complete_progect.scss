@@ -291,7 +291,7 @@
     }
 
 
-    @media screen and (min-width: $mobile) and (max-width: $desktopMin)
+    @media screen and (min-width: 376px) and (max-width: $desktopMin)
     {
         padding-bottom: 200px;
         &__slider_nav

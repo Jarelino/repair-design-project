@@ -152,7 +152,7 @@
         }
     }
 
-    @media screen and (min-width: $mobile) and (max-width: $desktopMin)
+    @media screen and (min-width: 376px) and (max-width: $desktopMin)
     {
         bottom: 400px;
         &__content_item_logo
